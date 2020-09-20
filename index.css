@@ -47,11 +47,11 @@ padding: .25em;
 
 .navi select {
   font-size: inherit;
-  color:inherit;
+  color: inherit;
   font-family: inherit;
   background-color: transparent;
-  border-color: transparent;
-  border: 1px solid #fff;
+  border: 5px solid #333333;
+  border-radius: 4px;
   font-weight: bold;
   position: relative;
 
@@ -63,8 +63,10 @@ padding: .25em;
 }
 
 .navi select option {
-  border: 1px solid #fff;
-  background-color: transparent;
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: none;
 }
 
 .navi option {
