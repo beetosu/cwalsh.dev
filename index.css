@@ -59,7 +59,6 @@ body {
 .App-body {
   display: flex;
   padding-bottom: 20vmin;
-  font-weight: bold;
   font-size: calc(10px + 4vmin);
   flex-direction: row;
   align-items: center;
@@ -91,7 +90,7 @@ body {
 }
 
 #bots:hover {
-  background-color: #FF99E0;
+  background-color: #17b978;
 }
 
 #games:hover {

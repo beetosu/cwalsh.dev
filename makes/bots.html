@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.png">
+    <meta name="Colin Walsh" content="my bots">
+    <link rel="stylesheet" href="../makes.css" />
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      function startSite() {
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+      }
+    </script>
+    <title>Colin Walsh</title>
+<body onload="startSite();">
+  <div class="App">
+    <header>
+      <a href="../index.html" id="homepage"><h1>Colin Walsh 🤖</h1></a>
+    </header>
+    <div class="items">
+      <div class="entry" id="anarchy">
+        <div alt="randomly generated flag" class="thumbnail"></div>
+        <div class="entry-text">
+          <span class="entry-title">Anarchy Flag Bot (2020)</span>
+          <p class="entry-desc">
+            A twitter bot that randomly generates anarchist idealogies, and pairs them with flags
+            (for the record, what you're looking at is the flag for anarcho-nudism).
+          </p>
+          <span class="entry-links">
+            <a href="https://www.twitter.com/anarchyflagbot">Twitter</a>
+            <a href="https://www.github.com/beetosu/anarchyflagbot">GitHub</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

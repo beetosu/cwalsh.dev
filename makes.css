@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfd;
+  color: #333333;
+}
+
+.emoji {
+  display: inline-block;
+  width: auto;
+  align-self: center;
+  height: 1.1em;
+  vertical-align: -0.180em;
+}
+
+.App {
+  text-align: center;
+}
+
+#homepage {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  min-height: 25vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.items {
+  font-size: calc(10px + 4vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+.entry {
+  min-height: 25vmin;
+  width: 40%;
+  padding: .5em;
+  border-radius: 10px;
+  background-color: #17b978;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.entry-text {
+  text-align: left;
+  padding-top: -.5em;
+}
+
+.entry-title {
+  font-size: calc(16px + 2vmin);
+  align-self: flex-start;
+  font-weight: bold;
+}
+
+.entry-desc {
+  font-size: calc(6px + 2vmin);
+}
+
+.entry-links {
+  font-size: calc(6px + 2vmin);
+}
+
+.thumbnail {
+  background: url("img/anarchy.png") 50% 50% no-repeat;
+  min-width: 25vmin;
+  min-height: 25vmin;
+  border-radius: 10px;
+  margin-right: .5em;
+}
