@@ -9,7 +9,7 @@
     <script>
       function startSite() {
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-        document.getElementById("sentence").innerHTML = "I make ";
+        document.getElementById("sentence").innerHTML = "I ";
         document.getElementById("noun").innerHTML = "...";
       }
       function changeNoun(noun) {
@@ -39,10 +39,10 @@
           <span id="noun"></span>
         </div>
         <div class="subpages">
-          <a onmouseover="changeNoun('bots')" class="sublink" id="bots" href="makes/bots.html">🤖</a>
-          <a onmouseover="changeNoun('games')" class="sublink" id="games" href="makes/games.html">🎮</a>
-          <a onmouseover="changeNoun('programs')" class="sublink" id="programs" href="makes/programs.html">💾</a>
-          <a onmouseover="changeNoun('writings')" class="sublink" id="writings" href="makes/writings.html">📒</a>
+          <a onmouseover="changeNoun('make bots')" class="sublink" id="bots" href="makes/bots.html">🤖</a>
+          <a onmouseover="changeNoun('make games')" class="sublink" id="games" href="makes/games.html">🎮</a>
+          <a onmouseover="changeNoun('make programs')" class="sublink" id="programs" href="makes/programs.html">💾</a>
+          <a onmouseover="changeNoun('write')" class="sublink" id="writings" href="writes.html">📒</a>
         </div>
       </div>
     </div>
