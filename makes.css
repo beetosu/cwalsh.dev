@@ -43,8 +43,8 @@ header {
 }
 
 .entry {
-  min-height: 25vmin;
-  width: 40%;
+  height: 4.6em;
+  width: 15em;
   padding: .5em;
   border-radius: 10px;
   background-color: #17b978;
@@ -56,21 +56,11 @@ header {
 
 .entry-text {
   text-align: left;
-  padding-top: -.5em;
+  font-size: .5em;
 }
 
-.entry-title {
-  font-size: calc(16px + 2vmin);
-  align-self: flex-start;
-  font-weight: bold;
-}
-
-.entry-desc {
-  font-size: calc(6px + 2vmin);
-}
-
-.entry-links {
-  font-size: calc(6px + 2vmin);
+.entry-text b {
+  font-size: 1.0em;
 }
 
 .thumbnail {
