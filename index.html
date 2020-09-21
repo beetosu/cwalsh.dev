@@ -5,12 +5,23 @@
     <link rel="icon" href="favicon.png">
     <meta name="Colin Walsh" content="a [w.i.p.] site for the things i make">
     <link rel="stylesheet" href="index.css" />
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      function startSite() {
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+        document.getElementById("sentence").innerHTML = "I make ";
+        document.getElementById("noun").innerHTML = "...";
+      }
+      function changeNoun(noun) {
+        document.getElementById("noun").innerHTML = noun;
+      }
+    </script>
     <title>Colin Walsh</title>
-<body>
+<body onload="startSite();">
     <div id="root">
       <div class="App">
         <header class="App-header">
-          <h1>Colin Walsh <span><img class="emoji" draggable="false" alt="👋" src="https://twemoji.maxcdn.com/v/13.0.1/svg/1f44b.svg"></span></h1>
+          <a href="index.html" id="homepage"><h1>Colin Walsh 👋</h1></a>
           <div class="socials">
             <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
               <img src="img/linkedin.png" alt="LinkedIn" id="linkedin" title="" style="">
@@ -23,10 +34,15 @@
             </a>
           </div>
         </header>
-        <div class="footer">
-          <p>were you expecting more? well the good news is it's coming</p>
-          <p>eventually</p>
-          <p>when i get around to it</p>
+        <div class="App-body">
+          <span id="sentence"></span>
+          <span id="noun"></span>
+        </div>
+        <div class="subpages">
+          <a onmouseover="changeNoun('bots')" class="sublink" id="bots" href="makes/bots.html">🤖</a>
+          <a onmouseover="changeNoun('games')" class="sublink" id="games" href="makes/games.html">🎮</a>
+          <a onmouseover="changeNoun('programs')" class="sublink" id="programs" href="makes/programs.html">💾</a>
+          <a onmouseover="changeNoun('writings')" class="sublink" id="writings" href="makes/writings.html">📒</a>
         </div>
       </div>
     </div>

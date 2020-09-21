@@ -8,6 +8,46 @@ body {
   color: #333333;
 }
 
+#homepage {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 50vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials img {
+  width: 2em;
+  padding: .25em;
+}
+
+#github {
+  filter: grayscale(1)brightness(300%);
+}
+
+#linkedin {
+  filter: grayscale(1)brightness(65%);
+}
+
+#itch {
+  filter: brightness(25%);
+}
+
 .emoji {
   display: inline-block;
   width: auto;
@@ -16,48 +56,52 @@ body {
   vertical-align: -0.180em;
 }
 
-.App {
-text-align: center;
+.App-body {
+  display: flex;
+  padding-bottom: 20vmin;
+  font-weight: bold;
+  font-size: calc(10px + 4vmin);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-min-height: 75vmin;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: calc(10px + 2vmin);
+#sentence {
+  margin-right: .5em;
 }
 
-.socials {
-display: flex;
-align-items: center;
-
+#noun {
+  text-align: left;
 }
 
-.socials img {
-width: 2em;
-padding: .25em;
+.subpages {
+  font-size: calc(10px + 4vmin);
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: center;
 }
 
-.footer {
-font-size: calc(4px + 1.5vmin);
-padding: 1rem;
-bottom: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+.sublink {
+  background-color: #d8d3cd;
+  padding: .5em;
+  margin: .25em;
+  border-radius: 5px;
+  transition: background-color 0.25s ease;
 }
 
-#github {
-filter: grayscale(1)brightness(300%);
+#bots:hover {
+  background-color: #FF99E0;
 }
 
-#linkedin {
-filter: grayscale(1)brightness(65%);
+#games:hover {
+  background-color: #C46EBB;
 }
 
-#itch {
-filter: brightness(25%);
+#programs:hover {
+  background-color: #a37de0;
+}
+
+#writings:hover {
+  background-color: #5baee2;
 }
