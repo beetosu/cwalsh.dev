@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.png">
+    <meta name="Colin Walsh" content="a [w.i.p.] site for the things i make">
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      function startSite() {
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+        document.getElementById("sentence").innerHTML = "I ";
+        document.getElementById("noun").innerHTML = "make...";
+      }
+      function changeNoun(noun) {
+        document.getElementById("noun").innerHTML = noun;
+      }
+    </script>
+    <title>Colin Walsh</title>
+<body onload="startSite();">
+    <div class="App">
+      <header class="App-header">
+        <a href="index.html" id="homepage"><h1>Colin Walsh 👋</h1></a>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
+            <img src="img/linkedin.png" alt="LinkedIn" id="linkedin" title="" style="">
+          </a>
+          <a href="https://www.github.com/beetosu" target="_blank">
+            <img src="img/github.png" alt="GitHub" id="github" title="" style="">
+          </a>
+          <a href="https://beetosu.itch.io" target="_blank">
+            <img src="img/itch.png" alt="Itch.io" id="itch" title="" style="">
+          </a>
+          <a href="about.html" target="_blank">
+            <img src="img/paper.png" alt="Itch.io" id="itch" title="" style="">
+          </a>
+        </div>
+      </header>
+      <div class="App-body">
+        <span id="sentence"></span>
+        <span id="noun"></span>
+      </div>
+      <div class="subpages">
+        <a onmouseover="changeNoun('make bots')" class="sublink" id="bots" href="makes/bots.html">🤖</a>
+        <a onmouseover="changeNoun('make games')" class="sublink" id="games" href="makes/games.html">🎮</a>
+        <a onmouseover="changeNoun('write programs')" class="sublink" id="programs" href="writes/programs.html">💾</a>
+        <a onmouseover="changeNoun('write')" class="sublink" id="writings" href="writes.html">📒</a>
+      </div>
+    </div>
+</body>
