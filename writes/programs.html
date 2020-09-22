@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../favicon.png">
+    <meta name="Colin Walsh" content="misc programs">
+    <link rel="stylesheet" href="../makes.css" />
+    <script src="../makes.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      function startSite() {
+        let entries = document.getElementById("items").children;
+        let entryColor = "#a37de0";
+        customizeList(entries, entryColor);
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+      }
+    </script>
+    <title>Colin Walsh</title>
+<body onload="startSite();">
+  <div class="App">
+    <header>
+      <a href="../index.html" id="homepage"><h1>Colin Walsh 💾</h1></a>
+    </header>
+    <div id="items">
+      <div class="entry" id="jobapp">
+        <div alt="Logo for NewsMood" class="thumbnail"></div>
+        <div class="entry-text">
+          <b>JobApplication.Space (Present)</b><br><br>
+          A React app to organize job applications, at various stages.
+          Currently being finished, I think. Maybe.
+          <div class="entry-links">
+            <a href="https://github.com/beetosu/JobApplication.Space">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" id="newsmood">
+        <div alt="fish on fishing rod" class="thumbnail"></div>
+        <div class="entry-text">
+          <b>NewsMood (2019)</b><br><br>
+          A web app built for SteelHacks 2019. Utilizes Google Natural Language API to
+          analyze the sentiment of news media based on topic.
+          <div class="entry-links">
+            <a href="https://github.com/johndunaske/SteelHacks2019">GitHub</a>
+            <a href="https://devpost.com/software/newsmood-mjd23p">Devpost</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" id="dam">
+        <div class="entry-text">
+          <b>Dynamic Memory Allocator (2019)</b><br><br>
+          A custom built single-threaded dynamic memory allocator.
+          Built in C for Systems Programming (CSE220)
+          <div class="entry-links">
+            [code available upon request]
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" id="dam">
+        <div class="entry-text">
+          <b>Genetic Algorithm (2019)</b><br><br>
+          Code created to train and cultivate initially random inputs into the desired outputs.
+          Built in Scala for Intro to Computer Science II (CSE116)
+          <div class="entry-links">
+            [code available upon request]
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
