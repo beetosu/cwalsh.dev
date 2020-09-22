@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfd;
+  color: #333333;
+}
+
+.emoji {
+  display: inline-block;
+  width: auto;
+  align-self: center;
+  height: 1.1em;
+  vertical-align: -0.180em;
+}
+
+.App {
+  text-align: center;
+}
+
+#homepage {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  min-height: 25vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+#items {
+  font-size: calc(10px + 4vmin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+}
+
+.entry {
+  min-height: 25vmin;
+  max-width: calc(20em + 5vmax);
+  padding: .5em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+.entry-text {
+  text-align: left;
+  font-size: .5em;
+  max-width: calc(20em + 5vmax);
+}
+
+.entry-text b {
+  font-size: 1.5em;
+}
+
+.entry-links {
+  position: absolute;
+  bottom: 1.75em;
+}
+
+.thumbnail {
+  min-width: calc(5em + 5vmin);
+  min-height: calc(5em + 5vmin);
+  border-radius: 10px;
+  margin-right: .5em;
+}

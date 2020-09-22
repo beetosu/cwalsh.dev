@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.png">
+    <meta name="Colin Walsh" content="random writing things">
+    <link rel="stylesheet" href="makes.css" />
+    <script src="../makes.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+      function startSite() {
+        let entries = document.getElementById("items").children;
+        let entryColor = "#5baee2";
+        customizeList(entries, entryColor);
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+      }
+    </script>
+    <title>Colin Walsh</title>
+<body onload="startSite();">
+  <div class="App">
+    <header>
+      <a href="../index.html" id="homepage"><h1>Colin Walsh 📒</h1></a>
+    </header>
+    <div id="items">
+      <div class="entry" id="shakespeare">
+        <div class="entry-text">
+          <b>TRAP SHAKESPEARE (2019)</b><br><br>
+          A series of works created by splicing William Shakespere's sonnets with lyrics from various Chicago Drill, Trap, and Cloud rappers.
+          Created as a final project for "Introduction to Electronic Literature" (ENG281)
+          <div class="entry-links">
+            <a href="shakespeare.pdf">Read Online</a>
+            <a href="trapstatement.pdf">Artist Statement</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" id="summoner">
+        <div class="entry-text">
+          <b>The Summoner (2018)</b><br><br>
+          A short story about the Vatican and musical chairs. Won a Gold Medal for Humor in the 2018 Scholastic Art & Writing Awards.
+          <div class="entry-links">
+            <a href="https://ors.artandwriting.org/media/386977">Read Online</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
