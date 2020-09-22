@@ -43,12 +43,13 @@ header {
 }
 
 .entry {
-  height: 4.6em;
-  width: 15em;
+  min-height: 25vmin;
+  max-width: calc(20em + 5vmax);
   padding: .5em;
   border-radius: 10px;
   background-color: #17b978;
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: flex-start;
   justify-content: left;
@@ -57,16 +58,22 @@ header {
 .entry-text {
   text-align: left;
   font-size: .5em;
+  max-width: calc(20em + 5vmax);
 }
 
 .entry-text b {
-  font-size: 1.0em;
+  font-size: 1.5em;
+}
+
+.entry-links {
+  position: absolute;
+  bottom: 1.75em;
 }
 
 .thumbnail {
   background: url("img/anarchy.png") 50% 50% no-repeat;
-  min-width: 25vmin;
-  min-height: 25vmin;
+  min-width: calc(5em + 5vmin);
+  min-height: calc(5em + 5vmin);
   border-radius: 10px;
   margin-right: .5em;
 }
