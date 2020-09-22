@@ -5,9 +5,13 @@
     <link rel="icon" href="../favicon.png">
     <meta name="Colin Walsh" content="my bots">
     <link rel="stylesheet" href="../makes.css" />
+    <script src="../makes.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script>
       function startSite() {
+        let entries = document.getElementById("items").children;
+        let entryColor = "#17b978";
+        customizeList(entries, entryColor);
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
       }
     </script>
@@ -17,7 +21,7 @@
     <header>
       <a href="../index.html" id="homepage"><h1>Colin Walsh 🤖</h1></a>
     </header>
-    <div class="items">
+    <div id="items">
       <div class="entry" id="anarchy">
         <div alt="randomly generated flag" class="thumbnail"></div>
         <div class="entry-text">

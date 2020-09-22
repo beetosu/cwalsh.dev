@@ -34,7 +34,7 @@ header {
   font-size: calc(10px + 2vmin);
 }
 
-.items {
+#items {
   font-size: calc(10px + 4vmin);
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ header {
   max-width: calc(20em + 5vmax);
   padding: .5em;
   border-radius: 10px;
-  background-color: #17b978;
+  background-color: #EEEEEE;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -71,7 +71,6 @@ header {
 }
 
 .thumbnail {
-  background: url("img/anarchy.png") 50% 50% no-repeat;
   min-width: calc(5em + 5vmin);
   min-height: calc(5em + 5vmin);
   border-radius: 10px;
