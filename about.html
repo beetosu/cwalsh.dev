@@ -9,9 +9,18 @@
     <script>
       function startSite() {
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+        fetch("https://letterboxd.com/beetosu/rss")
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+          console.log(data);
+          const items = data.querySelector("item");
+        })
+        console.log("based")
       }
     </script>
     <title>Colin Walsh</title>
+</head>
 <body onload="startSite();">
   <div class="text">
     <h1>✨Hi! I'm Colin!✨</h1>
@@ -40,7 +49,7 @@
       out my <a href="https://letterboxd.com/beetosu/">Letterboxd</a> account for the occasional movie hot take.
       I also have a <a href=" https://www.goodreads.com/grubgrub">Goodreads</a> for when I actually get around to reading.<br><br>
       I'm open to all kinds of work, in all kinds of fields, so if you want to contact me regarding any opportunies (or you just wanna say hi),
-      I check my email <a href="mailto:cpwalsh@buffalo.edu">(cpwalsh@buffalo.edu)</a> often.
+      I check my email <a href="mailto:colin@cwalsh.dev">(colin@cwalsh.dev)</a> often.
     </p>
   </div>
 </body>
