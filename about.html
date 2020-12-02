@@ -6,17 +6,10 @@
     <meta name="Colin Walsh" content="about me">
     <link rel="stylesheet" href="about.css" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       function startSite() {
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-        fetch("https://letterboxd.com/beetosu/rss")
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-          console.log(data);
-          const items = data.querySelector("item");
-        })
-        console.log("based")
       }
     </script>
     <title>Colin Walsh</title>
