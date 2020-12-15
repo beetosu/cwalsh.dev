@@ -11,6 +11,7 @@ body {
 #homepage {
   text-decoration: none;
   color: inherit;
+  max-width: 75vh;
 }
 
 .App {
