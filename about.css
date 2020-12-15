@@ -48,6 +48,10 @@ li {
   margin-bottom: 1.3em;
 }
 
+li .emoji {
+  height: 1.75em;
+}
+
 p {
   text-align: left;
   font-size: calc(8px + 1vmin);
