@@ -10,7 +10,7 @@
     <script>
       function startSite() {
         let entries = document.getElementById("items").children;
-        let entryColor = "#17b978";
+        let entryColor = "#49E9A9";
         customizeList(entries, entryColor);
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
       }
@@ -22,6 +22,18 @@
       <a href="../" id="homepage"><h1>Colin Walsh 🤖</h1></a>
     </header>
     <div id="items">
+      <div class="entry" id="miiverse">
+        <div alt="the logo for Miiverse, drawn" class="thumbnail"></div>
+        <div class="entry-text">
+          <b>Miiverse Museum (2020)</b><br><br>
+          A twitter bot that posts random drawings posted to the now defunct
+          social media platform "Miiverse".
+          <div class="entry-links">
+            <a href="https://twitter.com/MiiverseMuseum/">Twitter</a>
+            <a href="https://github.com/beetosu/Miiverse-Museum/">GitHub</a>
+          </div>
+        </div>
+      </div>
       <div class="entry" id="fishingbot">
         <div alt="fish on fishing rod" class="thumbnail"></div>
         <div class="entry-text">
