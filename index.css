@@ -34,23 +34,8 @@ body {
 
 .socials img {
   width: 1.5em;
+  justify-content: center;
   padding: .25em;
-}
-
-#github {
-  filter: grayscale(1)brightness(300%);
-}
-
-#linkedin {
-  filter: grayscale(1)brightness(65%);
-}
-
-#itch {
-  filter: brightness(25%);
-}
-
-#about {
-  filter: brightness(25%);
 }
 
 .emoji {
