@@ -9,41 +9,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <script>
-      function startSite() {
-        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-      }
-      function changeNoun(noun) {
-        document.getElementById("noun").innerHTML = noun;
-      }
+    <script type="module">
+      const emojis = [
+        '😄', '🤠', '🧑‍💻',  '👋', '🐂',
+        '🦧', '🐂', '🐃', '🦥', '🦦',
+        '🦩', '🐛', '📚', '💻', '🧋',
+        '🎮', '🏞️', '🌇', '🛸', '🎉',
+        '🖼️', '🖥️', '💾', '🧮', '📖',
+        '📝', '🏳️‍🌈'
+      ]
+      const idx = Math.floor(Math.random() * emojis.length);
+      document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`; 
+      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
     </script>
     <title>Colin Walsh</title>
 </head>
 <body onload="startSite();">
-  <div class="homepage">
-    <header>
-      <a href="/" class="name"><h1>Colin Walsh 👋</h1></a>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
-          <img src="img/icons/linkedin.svg" alt="LinkedIn" id="linkedin">
-        </a>
-        <a href="https://www.github.com/beetosu" target="_blank">
-          <img src="img/icons/github.svg" alt="GitHub" id="github">
-        </a>
-        <a href="about" target="_blank">
-          <img src="img/icons/about.svg" alt="About Me" id="about">
-        </a>
-      </div>
-    </header>
-    <div class="sentence">
-      <p id="pronoun">I </p>
-      <p id="noun">make...</p>
-    </div>
-    <footer>
-      <a onmouseover="changeNoun('make bots')" class="subpage" id="bots" href="makes/bots.html">🤖</a>
-      <a onmouseover="changeNoun('make games')" class="subpage" id="games" href="makes/games.html">🎮</a>
-      <a onmouseover="changeNoun('write programs')" class="subpage" id="programs" href="writes/programs.html">💾</a>
-      <a onmouseover="changeNoun('write')" class="subpage" id="writings" href="writes.html">📒</a>
-    </footer>
-  </div>
+  <header>
+    <h1 id="name">Colin Walsh 👋</h1>
+    <p>(they/them)</p>
+  </header>
+  <footer>
+    <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
+      <img src="img/icons/linkedin.svg" alt="LinkedIn" id="linkedin">
+    </a>
+    <a href="https://www.github.com/beetosu" target="_blank">
+      <img src="img/icons/github.svg" alt="GitHub" id="github">
+    </a>
+    <a href="https://beetosu.itch.io" target="_blank">
+      <img src="img/icons/itch.svg" alt="About Me" id="about">
+    </a>
+    <a href="resume.pdf" target="_blank">
+      <img src="img/icons/about.svg" alt="About Me" id="about">
+    </a>
+  </footer>
 </body>
