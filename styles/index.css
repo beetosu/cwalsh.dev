@@ -38,13 +38,25 @@ header p {
   vertical-align: -0.180em;
 }
 
-footer {
+#socials {
   display: flex;
   align-items: center;
 }
 
-footer img {
+#socials svg {
+  height: min(8vmin, 3em);
   width: min(8vmin, 3em);
   justify-content: center;
   padding: min(2vmin, .5em);
+  fill: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #333;
+      color: #fdfdfd;
+  }
+  #socials svg {
+    fill: #fdfdfd;
+  }
 }
