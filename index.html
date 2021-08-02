@@ -7,13 +7,11 @@
     <meta name="keywords" content="colin, walsh, full, stack, front, end, frontend, backend, software, engineer, buffalo, ny, new york, syracuse, technology, ub, suny, beetosu, alarm.com">
     <meta name="author" content="Colin Walsh">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script>
       function startSite() {
         twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
-        document.getElementById("sentence").innerHTML = "I ";
-        document.getElementById("noun").innerHTML = "make...";
       }
       function changeNoun(noun) {
         document.getElementById("noun").innerHTML = noun;
@@ -22,33 +20,30 @@
     <title>Colin Walsh</title>
 </head>
 <body onload="startSite();">
-    <div class="App">
-      <header class="App-header">
-        <a href="/" id="homepage"><h1>Colin Walsh 👋</h1></a>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
-            <img src="img/icons/linkedin.svg" alt="LinkedIn" id="linkedin">
-          </a>
-          <a href="https://www.github.com/beetosu" target="_blank">
-            <img src="img/icons/github.svg" alt="GitHub" id="github">
-          </a>
-          <a href="https://beetosu.itch.io" target="_blank">
-            <img src="img/icons/itch.svg" alt="Itch.io" id="itch">
-          </a>
-          <a href="about.html" target="_blank">
-            <img src="img/icons/about.svg" alt="About Me" id="about">
-          </a>
-        </div>
-      </header>
-      <div class="App-body">
-        <span id="sentence"></span>
-        <span id="noun"></span>
+  <div class="homepage">
+    <header>
+      <a href="/" class="name"><h1>Colin Walsh 👋</h1></a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/colin-p-walsh" target="_blank">
+          <img src="img/icons/linkedin.svg" alt="LinkedIn" id="linkedin">
+        </a>
+        <a href="https://www.github.com/beetosu" target="_blank">
+          <img src="img/icons/github.svg" alt="GitHub" id="github">
+        </a>
+        <a href="about" target="_blank">
+          <img src="img/icons/about.svg" alt="About Me" id="about">
+        </a>
       </div>
-      <div class="subpages">
-        <a onmouseover="changeNoun('make bots')" class="sublink" id="bots" href="makes/bots.html">🤖</a>
-        <a onmouseover="changeNoun('make games')" class="sublink" id="games" href="makes/games.html">🎮</a>
-        <a onmouseover="changeNoun('write programs')" class="sublink" id="programs" href="writes/programs.html">💾</a>
-        <a onmouseover="changeNoun('write')" class="sublink" id="writings" href="writes.html">📒</a>
-      </div>
+    </header>
+    <div class="sentence">
+      <p id="pronoun">I </p>
+      <p id="noun">make...</p>
     </div>
+    <footer>
+      <a onmouseover="changeNoun('make bots')" class="subpage" id="bots" href="makes/bots.html">🤖</a>
+      <a onmouseover="changeNoun('make games')" class="subpage" id="games" href="makes/games.html">🎮</a>
+      <a onmouseover="changeNoun('write programs')" class="subpage" id="programs" href="writes/programs.html">💾</a>
+      <a onmouseover="changeNoun('write')" class="subpage" id="writings" href="writes.html">📒</a>
+    </footer>
+  </div>
 </body>

@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfd;
+  color: #333333;
+  text-align: center;
+}
+
+div.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: min(5vh, 15vw, 5em);
+}
+
+header a.name {
+  text-decoration: none;
+  color: inherit;
+  font-size: min(5vmin, 1.5em);
+}
+
+.emoji {
+  display: inline-block;
+  width: auto;
+  align-self: center;
+  height: min(25vmin, 1.1em);
+  vertical-align: -0.180em;
+}
+
+header div.socials {
+  display: flex;
+  align-items: center;
+}
+
+header .socials img {
+  width: min(8vmin, 3em);
+  justify-content: center;
+  padding: min(2vmin, .5em);
+}
+
+div.sentence {
+  display: flex;
+  font-size: min(8vmin, 2.5em);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+div.sentence p#pronoun {
+  margin-right: min(3vmin, 2em);
+}
+
+div.sentence p#noun {
+  text-align: left;
+}
+
+footer {
+  font-size: min(8vmin, 2.5em);
+  display: flex;
+  justify-content: center;
+  margin-bottom: min(10vmin, 2em);
+}
+
+footer a.subpage {
+  background-color: #d8d3cd;
+  padding: min(3vmin, .5em);
+  margin: min(1.5vw, .5em);
+  border-radius: 5px;
+  transition: background-color 0.25s ease;
+}
+
+footer a.subpage#bots:hover {
+  background-color: #49E9A9;
+}
+
+footer a.subpage#games:hover {
+  background-color: #CA7DC1;
+}
+
+footer a.subpage#programs:hover {
+  background-color: #AF8EE4;
+}
+
+footer a.subpage#writings:hover {
+  background-color: #72BAE6;
+}
