@@ -10,16 +10,22 @@
     <link rel="stylesheet" href="index.css" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script type="module">
-      const emojis = [
+      const bothModes = [
         '😄', '🤠', '🧑‍💻',  '👋', '🐂',
-        '🦧', '🐂', '🐃', '🦥', '🦦',
-        '🦩', '🐛', '📚', '💻', '🧋',
-        '🎮', '🏞️', '🌇', '🛸', '🎉',
-        '🖼️', '🖥️', '💾', '🧮', '📖',
-        '📝', '🏳️‍🌈'
+        '🦧', '🐂', '🦥', '🦦', '🦩',
+        '🐛', '📚', '💻', '🧋', '🏞️',
+        '🌇', '🛸', '🎉', '🖼️', '🖥️',
+        '🧮', '🏳️‍🌈', '🌇'
       ]
-      const idx = Math.floor(Math.random() * emojis.length);
-      document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`; 
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        const darkMode = bothModes.concat([ '📝', '📖' ]);
+        const idx = Math.floor(Math.random() * darkMode.length);
+        document.getElementById("name").innerHTML = `Colin Walsh ${darkMode[idx]}`; 
+      } else {
+        const lightMode = bothModes.concat([ '🎮', '🐃', '💾'  ]);
+        const idx = Math.floor(Math.random() * lightMode.length);
+        document.getElementById("name").innerHTML = `Colin Walsh ${lightMode[idx]}`; 
+      }
       twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
     </script>
     <title>Colin Walsh</title>
