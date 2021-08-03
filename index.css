@@ -44,8 +44,8 @@ header p {
 }
 
 #socials svg {
-  height: min(8vmin, 3em);
-  width: min(8vmin, 3em);
+  height: min(10vmin, 3em);
+  width: min(10vmin, 3em);
   justify-content: center;
   padding: min(2vmin, .5em);
   fill: #333;
