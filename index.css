@@ -34,8 +34,8 @@ header p {
   display: inline-block;
   width: auto;
   align-self: center;
-  height: min(25vmin, 1.1em);
-  vertical-align: -0.180em;
+  height: min(15vmin, 1.15em);
+  vertical-align: -0.25em;
 }
 
 #socials {

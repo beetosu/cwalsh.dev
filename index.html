@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="index.css" />
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script type="module">
-      const bothModes = [
+      const emojis = [
         '😄', '🤠', '🧑‍💻',  '👋', '🐂',
         '🦧', '🐂', '🦥', '🦦', '🦩',
         '🐛', '📚', '💻', '🧋', '🏞️',
@@ -18,11 +18,11 @@
         '🧮', '🏳️‍🌈', '🌇'
       ]
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        const darkMode = bothModes.concat([ '📝', '📖' ]);
+        const darkMode = emojis.concat([ '📝', '📖' ]);
         const idx = Math.floor(Math.random() * darkMode.length);
         document.getElementById("name").innerHTML = `Colin Walsh ${darkMode[idx]}`; 
       } else {
-        const lightMode = bothModes.concat([ '🎮', '🐃', '💾'  ]);
+        const lightMode = emojis.concat([ '🎮', '🐃', '💾'  ]);
         const idx = Math.floor(Math.random() * lightMode.length);
         document.getElementById("name").innerHTML = `Colin Walsh ${lightMode[idx]}`; 
       }
