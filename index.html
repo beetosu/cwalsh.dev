@@ -18,20 +18,19 @@
         '🧮', '🏳️‍🌈', '🌇'
       ]
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        const darkMode = emojis.concat([ '📝', '📖' ]);
-        const idx = Math.floor(Math.random() * darkMode.length);
-        document.getElementById("name").innerHTML = `Colin Walsh ${darkMode[idx]}`; 
+        emojis.push(...[ '📝', '📖' ]);
       } else {
-        const lightMode = emojis.concat([ '🎮', '🐃', '💾'  ]);
-        const idx = Math.floor(Math.random() * lightMode.length);
-        document.getElementById("name").innerHTML = `Colin Walsh ${lightMode[idx]}`; 
+        emojis.push(...[ '🎮', '🐃', '💾'  ]);
       }
-      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+      const idx = Math.floor(Math.random() * emojis.length); 
+      document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`;
+      const header = document.body.children.header;
+      twemoji.parse(header.children.name, { folder: 'svg', ext: '.svg' });
     </script>
     <title>Colin Walsh</title>
 </head>
 <body>
-  <header aria-label="Header">
+  <header id="header" aria-label="Header">
     <h1 id="name" aria-label="My name">Colin Walsh 👋</h1>
     <p id="pronouns" aria-label="My pronouns">(they/them)</p>
   </header>
