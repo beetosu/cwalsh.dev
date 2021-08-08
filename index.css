@@ -6,21 +6,47 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fdfdfd;
   color: #333333;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
   justify-content: center;
+}
+
+#scroller {
   height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 header {
-  margin-bottom: min(7.5vmin, 2em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+div#work {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+div#work svg {
+  height: min(30vmin, 12em);
+  width: min(35vmin, 12em);
+  justify-content: center;
+  padding: min(2vmin, .5em);
+  fill: #333;
 }
 
 header h1 {
-  text-decoration: none;
-  color: inherit;
   font-size: min(10vmin, 3em);
   margin: 0;
 }
@@ -28,6 +54,7 @@ header h1 {
 header p {
   margin: 0;
   font-size: min(5vmin, 1.5em);
+  margin-bottom: min(3vmin, .75em);
 }
 
 .emoji {
@@ -51,6 +78,29 @@ header p {
   fill: #333;
 }
 
+.item {
+  display: flex;
+}
+
+.item div {
+  align-self: center;
+  margin-left: min(4vmin, 1em);
+}
+
+h2 {
+  margin: 0;
+  font-size: min(4vmin, 1.5em);
+}
+
+h3 {
+  margin: 0;
+  font-size: min(3vmin, 1.15em);
+}
+
+.item p {
+  font-size: min(3vmin, 1em);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
       background-color: #333;
@@ -58,5 +108,9 @@ header p {
   }
   #socials svg {
     fill: #fdfdfd;
+  }
+
+  #alarm-outline {
+    fill: #fff;
   }
 }
