@@ -1,7 +1,8 @@
 body {
-  margin: 0;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 60rem;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fdfdfd;
@@ -9,41 +10,57 @@ body {
   display: flex;
   flex-direction: column;
   flex-flow: column nowrap;
-  justify-content: center;
-}
-
-#scroller {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  scroll-snap-align: start;
+  margin-bottom: min(8vmin, 2rem);
 }
 
-div#work {
-  scroll-snap-align: start;
-  height: 100vh;
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-div#work svg {
-  height: min(30vmin, 12em);
-  width: min(35vmin, 12em);
+section h1 {
+  font-size: 2rem;
+  align-self: center;
+}
+
+#tldr {
+  align-self: center;
+  list-style-type: none;
+}
+
+#tldr li {
+  margin: .25rem;
+}
+
+#tldr ul {
+  list-style-type: none;
+}
+
+section svg {
+  height: min(20vmin, 12em);
+  width: min(20vmin, 12em);
   justify-content: center;
   padding: min(2vmin, .5em);
   fill: #333;
+}
+
+#projects img {
+  height: min(20vmin, 15em);
+  width: min(20vmin, 15em);
+  justify-content: center;
+  padding: min(2vmin, .5em);
+  border-radius: 1em;
 }
 
 header h1 {
@@ -80,11 +97,17 @@ header p {
 
 .item {
   display: flex;
+  margin: 1.5rem;
 }
 
 .item div {
   align-self: center;
   margin-left: min(4vmin, 1em);
+}
+
+.item div.links {
+  margin: 0;
+  font-size: min(3vmin, 1em);
 }
 
 h2 {
@@ -99,6 +122,12 @@ h3 {
 
 .item p {
   font-size: min(3vmin, 1em);
+}
+
+@media (min-width: 65rem) {
+  header {
+    flex-direction: row;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
