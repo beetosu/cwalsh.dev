@@ -14,10 +14,10 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: min(8vmin, 2rem);
+  margin-bottom: 4rem;
 }
 
 section {
@@ -48,29 +48,21 @@ section h1 {
 }
 
 section svg {
-  height: min(20vmin, 12em);
-  width: min(20vmin, 12em);
-  justify-content: center;
-  padding: min(2vmin, .5em);
+  height: 12rem;
+  width: 12rem;
+  justify-self: center;
+  padding: 1rem;
   fill: #333;
 }
 
-#projects img {
-  height: min(20vmin, 15em);
-  width: min(20vmin, 15em);
-  justify-content: center;
-  padding: min(2vmin, .5em);
-  border-radius: 1em;
-}
-
 header h1 {
-  font-size: min(10vmin, 3em);
+  font-size: 3rem;
   margin: 0;
 }
 
 header p {
   margin: 0;
-  font-size: min(5vmin, 1.5em);
+  font-size: 1.5rem;
   margin-bottom: min(3vmin, .75em);
 }
 
@@ -88,10 +80,10 @@ header p {
 }
 
 #socials svg {
-  height: min(10vmin, 3em);
-  width: min(10vmin, 3em);
+  height: 3rem;
+  width: 3rem;
   justify-content: center;
-  padding: min(2vmin, .5em);
+  padding: 1rem;
   fill: #333;
 }
 
@@ -100,33 +92,70 @@ header p {
   margin: 1.5rem;
 }
 
+.item img {
+  height: 12rem;
+  width: 12rem;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
 .item div {
   align-self: center;
-  margin-left: min(4vmin, 1em);
+  margin-left: 1rem;
 }
 
 .item div.links {
   margin: 0;
-  font-size: min(3vmin, 1em);
+  font-size: 1rem;
 }
 
 h2 {
   margin: 0;
-  font-size: min(4vmin, 1.5em);
+  font-size: 1.5rem;
 }
 
 h3 {
   margin: 0;
-  font-size: min(3vmin, 1.15em);
+  font-size: 1rem;
 }
 
 .item p {
-  font-size: min(3vmin, 1em);
+  font-size: 1rem;
 }
 
-@media (min-width: 65rem) {
+@media (max-width: 65rem) {
   header {
-    flex-direction: row;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 50rem) {
+  section {
+    align-items: center;
+  }
+
+  section a {
+    align-self: center;
+  }
+
+  section svg {
+    width: 17.5rem;
+    height: 17.5rem;
+    padding: 0;
+  }
+
+  .item {
+    flex-direction: column;
+    margin: .5rem .5rem 3rem
+  }
+  .item div {
+    margin: 0;
+  }
+  .item img {
+    align-self: center;
+    width: 17.5rem;
+    height: 17.5rem;
   }
 }
 
