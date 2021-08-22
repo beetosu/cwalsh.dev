@@ -20,6 +20,14 @@ header {
   margin-bottom: 4rem;
 }
 
+input {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -165,16 +173,27 @@ h3 {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-      background-color: #333;
-      color: #fdfdfd;
-  }
-  #socials svg {
-    fill: #fdfdfd;
-  }
+body.dark-mode {
+  background-color: #333;
+  color: #fdfdfd;
+}
 
-  #alarm-outline {
-    fill: #fff;
-  }
+body.dark-mode #socials svg {
+  fill: #fdfdfd;
+}
+
+body.dark-mode #alarm-outline {
+  fill: #fff;
+}
+
+body.dark-mode .item div.links a {
+  color: #b0c3ff;
+}
+
+body.dark-mode .item div.links a:visited {
+  color: #9779b3;
+}
+
+body.dark-mode input {
+  content: url("./files/light.svg")
 }

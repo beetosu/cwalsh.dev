@@ -9,6 +9,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css" />
   <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <script>
+    function enableDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.darkMode = 'true';
+      document.getElementById("dark").src = "./files/light.svg"
+
+      document.getElementById("bs").innerHTML = "💻 B.S. in Computer Science";
+      document.getElementById("grad").innerHTML = "📜 Current Senior (Graduating May 2022)";
+      document.getElementById("mobile").innerHTML = "🔒 I'm currently learning mobile development and cybersecurity";
+      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+    }
+    function disableDarkMode() {
+      document.body.classList.remove("dark-mode");
+      localStorage.darkMode = 'false';
+      document.getElementById("dark").src = "./files/dark.svg"
+
+      document.getElementById("bs").innerHTML = "💾 B.S. in Computer Science";
+      document.getElementById("grad").innerHTML = "🎓 Current Senior (Graduating May 2022)";
+      document.getElementById("mobile").innerHTML = "📱 I'm currently learning mobile development and cybersecurity";
+      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+    }
+    function colorMode() {
+      document.body.style.transition = 'background 1s';
+      document.body.classList.length > 0 ? disableDarkMode() : enableDarkMode();
+    }
+  </script>
   <script type="module">
     const emojis = [
       '😄', '🤠', '🧑‍💻',  '👋', '🐂',
@@ -17,10 +43,8 @@
       '🛸', '🎉', '🖼️', '🧮', '🏳️‍🌈',
       '🌇'
     ]
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      emojis.push(...[ '📝', '📖', '🖥️', '💻' ]);
-    } else {
-      emojis.push(...[ '🎮', '🐃', '💾'  ]);
+    if (localStorage.darkMode === 'true' || (localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      enableDarkMode();
     }
     const idx = Math.floor(Math.random() * emojis.length); 
     document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`;
@@ -58,6 +82,7 @@
       </a>
     </div>
   </header>
+  <input id="dark" type="image" src="./files/dark.svg" onclick="colorMode();" />
   <div id="sections">
     <section id="about">
       <h1>About Me</h1>
@@ -66,14 +91,14 @@
         <li>
           🐂 I attend University at Buffalo
           <ul>
-            <li>💾 B.S. in Computer Science</li>
+            <li id="bs">💾 B.S. in Computer Science</li>
             <li>📚 Minor in English</li>
-            <li>🎓 Current Senior (Graduating May 2022)</li>
+            <li id="grad">🎓 Current Senior (Graduating May 2022)</li>
           </ul>
         </li>
         <li>🏳️‍🌈 I use they/them pronouns</li>
         <li>🖼️ My current professional focus is in front-end/full-stack web development</li>
-        <li>📱 I'm currently learning mobile development and cybersecurity</li>
+        <li id="mobile">📱 I'm currently learning mobile development and cybersecurity</li>
       </ul>
     </section>
     <section id="work">
