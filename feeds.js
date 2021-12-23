@@ -39,6 +39,7 @@ function get_media(obj) {
 function parse_song(xml) {
     const info = xml.querySelector('item title').innerHTML.split(' - ')
     document.getElementById('song').innerHTML = `🎶 The last thing I listened to was ${info[1]} by ${info[0]}`
+    twemoji.parse(document.getElementById('film'), { folder: 'svg', ext: '.svg' });
 }
 
 function parse_book(xml){
@@ -46,6 +47,8 @@ function parse_book(xml){
         title: xml.querySelector('item title').innerHTML,
         author: xml.querySelector('item author_name').innerHTML,
     }
+
+    twemoji.parse(document.getElementById('film'), { folder: 'svg', ext: '.svg' });
 
     document.getElementById('book').innerHTML= `📕 Lately I've been reading ${book.title} by ${book.author}`
 }
