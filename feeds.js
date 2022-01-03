@@ -36,12 +36,6 @@ function get_media(obj) {
     })
 }
 
-function parse_song(xml) {
-    const info = xml.querySelector('item title').innerHTML.split(' - ')
-    document.getElementById('song').innerHTML = `🎶 The last thing I listened to was ${info[1]} by ${info[0]}`
-    twemoji.parse(document.getElementById('song'), { folder: 'svg', ext: '.svg' });
-}
-
 function parse_book(xml){
     let book = {
         title: xml.querySelector('item title').innerHTML,
@@ -79,11 +73,6 @@ rss_feeds = [
         type: 'book',
         url: 'https://www.goodreads.com/review/list_rss/112527048?shelf=currently-reading',
         callback: parse_book
-    },
-    {
-        type: 'music',
-        url: 'https://lfm.xiffy.nl/beetosu',
-        callback: parse_song
     }
 ]
 
