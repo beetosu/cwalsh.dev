@@ -17,8 +17,9 @@
 
       document.getElementById("bs").innerHTML = "💻 B.S. in Computer Science";
       document.getElementById("grad").innerHTML = "📜 Current Senior (Graduating May 2022)";
-      document.getElementById("mobile").innerHTML = "🔒 I'm currently learning mobile development and cybersecurity";
-      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+
+      twemoji.parse(document.getElementById("bs"), { folder: 'svg', ext: '.svg' });
+      twemoji.parse(document.getElementById("grad"), { folder: 'svg', ext: '.svg' });
     }
     function disableDarkMode() {
       document.body.classList.remove("dark-mode");
@@ -27,8 +28,9 @@
 
       document.getElementById("bs").innerHTML = "💾 B.S. in Computer Science";
       document.getElementById("grad").innerHTML = "🎓 Current Senior (Graduating May 2022)";
-      document.getElementById("mobile").innerHTML = "📱 I'm currently learning mobile development and cybersecurity";
-      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+
+      twemoji.parse(document.getElementById("bs"), { folder: 'svg', ext: '.svg' });
+      twemoji.parse(document.getElementById("grad"), { folder: 'svg', ext: '.svg' });
     }
     function colorMode() {
       document.body.style.transition = 'background 1s';
