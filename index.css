@@ -186,11 +186,11 @@ body.dark-mode #alarm-outline {
   fill: #fff;
 }
 
-body.dark-mode .item div.links a {
+body.dark-mode .item div.links a, body.dark-mode #about #tldr a {
   color: #b0c3ff;
 }
 
-body.dark-mode .item div.links a:visited {
+body.dark-mode .item div.links a:visited, body.dark-mode #about #tldr a:visited {
   color: #9779b3;
 }
 
