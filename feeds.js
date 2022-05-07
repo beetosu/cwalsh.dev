@@ -37,12 +37,14 @@ function get_media(obj) {
 }
 
 function parse_book(xml){
-    let book = {
-        title: xml.querySelector('item title').innerHTML,
-        author: xml.querySelector('item author_name').innerHTML,
+    if (!xml.querySelector('item title') && !xml.querySelector('item author_name')) {
+        document.getElementById('book').innerHTML = "📕 I haven't been reading anything lately :/";
     }
-
-    document.getElementById('book').innerHTML= `📕 Lately I've been reading ${book.title} by ${book.author}`;
+    else {
+        const bookTitle = xml.querySelector('item title').innerHTML;
+        const bookAuthor = xml.querySelector('item author_name').innerHTML;
+        document.getElementById('book').innerHTML = `📕 Lately I've been reading ${bookTitle} by ${bookAuthor}`;
+    }
     twemoji.parse(document.getElementById('book'), { folder: 'svg', ext: '.svg' });
 }
 
@@ -63,7 +65,7 @@ function parse_film(xml){
     }
 }
 
-rss_feeds = [
+rssFeeds = [
     {
         type: 'film',
         url: 'https://letterboxd.com/beetosu/rss/',
@@ -76,6 +78,6 @@ rss_feeds = [
     }
 ]
 
-for (let feed of rss_feeds) {
+for (let feed of rssFeeds) {
     get_media(feed);
 }
