@@ -41,8 +41,9 @@ function parse_book(xml){
         document.getElementById('book').innerHTML = "📕 I haven't been reading anything lately :/";
     }
     else {
-        const bookTitle = xml.querySelector('item title').innerHTML;
-        const bookAuthor = xml.querySelector('item author_name').innerHTML;
+        const bookTitle = xml.querySelector('item title').textContent;
+        const bookAuthor = xml.querySelector('item author_name').textContent;
+
         document.getElementById('book').innerHTML = `📕 Lately I've been reading ${bookTitle} by ${bookAuthor}`;
     }
     twemoji.parse(document.getElementById('book'), { folder: 'svg', ext: '.svg' });
