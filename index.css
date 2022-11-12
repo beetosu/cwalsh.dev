@@ -36,6 +36,8 @@ section {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 4rem;
+  background-color: #eee;
+  border-radius: 10px;
 }
 
 section h1 {
@@ -97,9 +99,15 @@ header p {
   fill: #333;
 }
 
+.items {
+  width: 100%;
+}
+
 .item {
   display: flex;
   margin: 1.5rem;
+  background-color: #fafafa;
+  border-radius: 10px;
 }
 
 .item img {
@@ -157,20 +165,15 @@ h3 {
 
   .item {
     flex-direction: column;
-    margin: .5rem .5rem 3rem
+    padding: .5rem .5rem 3rem
   }
-  .item div {
-    margin: 0 4rem 0 4rem;
-  }
+
   .item img {
     align-self: center;
     width: 17.5rem;
     height: 17.5rem;
   }
 
-  #tldr {
-    margin: 0 4rem 0 4rem;
-  }
 }
 
 body.dark-mode {
@@ -184,6 +187,14 @@ body.dark-mode #socials svg {
 
 body.dark-mode #alarm-outline {
   fill: #fff;
+}
+
+body.dark-mode section {
+  background-color: #3b3b3b;
+}
+
+body.dark-mode .item {
+  background-color: #383838;
 }
 
 body.dark-mode .item div.links a, body.dark-mode #about #tldr a {
