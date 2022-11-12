@@ -32,11 +32,10 @@
   </script>
   <script type="module">
     const emojis = [
-      '😄', '🤠', '🧑‍💻',  '👋', '🐂',
+      '😄', '🤠', '👋', '🐂', '🌇',
       '🦧', '🐂', '🦥', '🦦', '🦩',
       '🐛', '📚', '🧋', '🏞️', '🌇',
-      '🛸', '🎉', '🖼️', '🧮', '🏳️‍🌈',
-      '🌇'
+      '🛸', '🎉', '🖼️', '🧮', '🧍'
     ]
     if (localStorage.darkMode === 'true' || (localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       enableDarkMode();
@@ -44,7 +43,6 @@
     const idx = Math.floor(Math.random() * emojis.length); 
     document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`;
   </script>
-  <script src="feeds.js"></script>
   <title>Colin Walsh</title>
 </head>
 <body>
@@ -91,10 +89,9 @@
             <li id="grad">🎓 Class of '22</li>
           </ul>
         </li>
-        <li>🏳️‍🌈 I use they/them pronouns</li>
+        <li>🏛️ I currently reside in the Washington D.C. area</li>
         <li>🖼️ My current professional focus is in front-end/full-stack web development</li>
-        <li id="film">🎞️ Loading latest movie...</li>
-        <li id="book">📕 Loading latest book...</li>
+        <li>🏃 Outside of software, I'm a big fan of film, running, books, and farmers markets</li>
       </ul>
     </section>
     <section id="work">
@@ -113,6 +110,7 @@
             <h2>Software Engineer</h2>
             <h2>Alarm.com</h2>
             <h3>Jul. 2022 - Present</h3>
+            <p><i>Ember.js, TypeScript, C#, Mirage.js, Sass, Atlassian</i></p>
           </div>
         </div>
         <div class="item">

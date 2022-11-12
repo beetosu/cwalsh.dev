@@ -40,6 +40,11 @@ section {
   border-radius: 10px;
 }
 
+section#about {
+  width: fit-content;
+  margin: auto auto 4rem auto;
+}
+
 section h1 {
   font-size: 2rem;
   align-self: center;
@@ -48,7 +53,10 @@ section h1 {
 #tldr {
   align-self: center;
   list-style-type: none;
-  padding: 0;
+  padding: 1rem;
+  background-color: #fafafa;
+  margin-top: 0;
+  border-radius: 10px;
 }
 
 #tldr li {
@@ -193,7 +201,7 @@ body.dark-mode section {
   background-color: #3b3b3b;
 }
 
-body.dark-mode .item {
+body.dark-mode .item, body.dark-mode #tldr {
   background-color: #383838;
 }
 
