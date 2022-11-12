@@ -45,7 +45,7 @@ section#about {
   margin: auto auto 4rem auto;
 }
 
-section h1 {
+section h2 {
   font-size: 2rem;
   align-self: center;
 }
@@ -136,12 +136,12 @@ header p {
   font-size: 1rem;
 }
 
-h2 {
+h3 {
   margin: 0;
   font-size: 1.5rem;
 }
 
-h3 {
+h4 {
   margin: 0;
   font-size: 1rem;
 }
