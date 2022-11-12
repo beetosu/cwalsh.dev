@@ -8,7 +8,6 @@
   <meta name="author" content="Colin Walsh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css" />
-  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
   <script>
     function enableDarkMode() {
       document.body.classList.toggle("dark-mode");
@@ -17,9 +16,6 @@
 
       document.getElementById("bs").innerHTML = "💻 B.S. in Computer Science";
       document.getElementById("grad").innerHTML = "📜 Current Senior (Graduating May 2022)";
-
-      twemoji.parse(document.getElementById("bs"), { folder: 'svg', ext: '.svg' });
-      twemoji.parse(document.getElementById("grad"), { folder: 'svg', ext: '.svg' });
     }
     function disableDarkMode() {
       document.body.classList.remove("dark-mode");
@@ -28,9 +24,6 @@
 
       document.getElementById("bs").innerHTML = "💾 B.S. in Computer Science";
       document.getElementById("grad").innerHTML = "🎓 Current Senior (Graduating May 2022)";
-
-      twemoji.parse(document.getElementById("bs"), { folder: 'svg', ext: '.svg' });
-      twemoji.parse(document.getElementById("grad"), { folder: 'svg', ext: '.svg' });
     }
     function colorMode() {
       document.body.style.transition = 'background 1s';
@@ -50,7 +43,6 @@
     }
     const idx = Math.floor(Math.random() * emojis.length); 
     document.getElementById("name").innerHTML = `Colin Walsh ${emojis[idx]}`;
-    twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
   </script>
   <script src="feeds.js"></script>
   <title>Colin Walsh</title>
@@ -123,7 +115,6 @@
             <h3>Jul. 2022 - Present</h3>
           </div>
         </div>
-      </div>
         <div class="item">
           <a aria-label="University at Buffalo, Department of Computer Science and Engineering" href="https://cse.buffalo.edu" rel="noreferrer" target="_blank">
             <svg viewBox="0 0 313.10532 157.30133" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +162,7 @@
             <p><i>React, Figma, HTML/CSS</i></p>
             <p>A writing platform where the direction of a story is decided upon by the community built around it. Frontend created with a team of 5 for Applied Human-Computer Interaction (CSE370)</p>
             <div class="links">
-              <a href="https://ubmarketplace.herokuapp.com/" rel="noreferrer" target="_blank">Live Demo</a> | [Source code available upon request]
+              <a href="https://webdev.cse.buffalo.edu/hci/teams/fortuitous/" rel="noreferrer" target="_blank">Live Demo</a> | [Source code available upon request]
             </div>
           </div>
         </div>

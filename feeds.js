@@ -46,7 +46,6 @@ function parse_book(xml){
 
         document.getElementById('book').innerHTML = `📕 Lately I've been reading ${bookTitle} by ${bookAuthor}`;
     }
-    twemoji.parse(document.getElementById('book'), { folder: 'svg', ext: '.svg' });
 }
 
 function parse_film(xml){
@@ -58,8 +57,6 @@ function parse_film(xml){
     film.year = latestMovie.split(' - ')[0].split(', ')[1];
 
     document.getElementById('film').innerHTML= `🎞️ The last movie I saw was ${film.title} (${film.year})`;
-
-    twemoji.parse(document.getElementById('film'), { folder: 'svg', ext: '.svg' });
     
     if (latestMovie.includes(' - ')) {
         document.getElementById('film').innerHTML += `, <a href="${film.link}">it was ${translate_film_score(latestMovie.split(' - ')[1])}</a>`;
