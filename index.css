@@ -198,7 +198,7 @@ body.dark-mode #socials svg {
   fill: #fdfdfd;
 }
 
-body.dark-mode #alarm-outline {
+body.dark-mode .alarm-outline {
   fill: #fff;
 }
 
