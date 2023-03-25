@@ -5,7 +5,7 @@ const siteFiles = [
    "cannon.png",
    "dark.svg",
    "drill.png",
-   "favicon-512.png",
+   "icons/icon-512.png",
    "fishingbot.png",
    "jobapp.png",
    "light.svg",
@@ -15,14 +15,16 @@ const siteFiles = [
    "newsmood.png",
    "startpage.png",
    "suggestion.png",
-   "waiting.png"
+   "waiting.png",
+   "icons/favicon.png",
+   "icons/maskable_icon.png",
+   "icons/apple-touch-icon.png"
 ]
 
 const importantFiles = [
    "index.css",
    "/",
-   "manifest.json",
-   "files/favicon.png"
+   "manifest.json"
 ]
 
 self.addEventListener("install", (event) => {

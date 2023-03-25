@@ -3,14 +3,20 @@
     "name": "Colin Walsh | Software Engineer",
     "icons": [
       {
-        "src": "/files/favicon.png",
+        "src": "/files/icons/favicon.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/files/favicon-512.png",
+        "src": "/files/icons/icon-512.png",
         "type": "image/png",
         "sizes": "512x512"
+      },
+      {
+        "src": "/files/icons/maskable_icon.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any maskable"
       }
     ],
     "id": "/",
