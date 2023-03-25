@@ -7,8 +7,10 @@
   <meta name="keywords" content="colin, walsh, full, stack, front, end, frontend, backend, software, engineer, buffalo, ny, new york, syracuse, technology, ub, suny, beetosu, alarm.com">
   <meta name="author" content="Colin Walsh">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="index.css" />
   <script>
+    // Dark/light mode functionality
     function enableDarkMode() {
       document.body.classList.toggle("dark-mode");
       localStorage.darkMode = 'true';
@@ -34,8 +36,11 @@
 `feel free to get a better view of this site / my other projects here!
 https://github.com/beetosu/cwalsh.dev
 ٩(๑❛ᴗ❛๑)۶`;
+    console.log(devMessage);
 
-  console.log(devMessage);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("/serviceworker.js");
+    }
   </script>
   <script type="module">
     const emojis = [
@@ -53,6 +58,10 @@ https://github.com/beetosu/cwalsh.dev
     const hearts = ['🧡', '💙', '💚', '💜', '💛', '❤️'];
     const idxHearts = Math.floor(Math.random() * hearts.length);
     document.getElementsByTagName("footer")[0].innerHTML = `made w/ ${hearts[idxHearts]} by Colin Walsh | <a href="https://github.com/beetosu/cwalsh.dev/">Source</a> | <a href="https://github.com/beetosu/cwalsh.dev/blob/master/LICENSE.md">License</a>`
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("/serviceworker.js");
+   }
   </script>
   <title>Colin Walsh</title>
 </head>

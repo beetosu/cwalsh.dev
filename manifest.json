@@ -1,0 +1,23 @@
+{
+    "short_name": "Colin Walsh",
+    "name": "Colin Walsh | Software Engineer",
+    "icons": [
+      {
+        "src": "/files/favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/files/favicon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/",
+    "start_url": "/",
+    "background_color": "#FDFDFD",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3B7AAA",
+    "description": "The personal website of Colin Walsh, a software engineer based out of the Washington DC metro area"
+  }
