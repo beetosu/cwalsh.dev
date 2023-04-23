@@ -109,6 +109,9 @@ header p {
 
 .items {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .item {
@@ -116,6 +119,7 @@ header p {
   margin: 1.5rem;
   background-color: #fafafa;
   border-radius: 10px;
+  width: inherit;
 }
 
 .item img {
@@ -128,7 +132,7 @@ header p {
 
 .item div {
   align-self: center;
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
 
 .item div.links {
@@ -164,6 +168,8 @@ footer {
 @media (max-width: 50rem) {
   section {
     align-items: center;
+    width: 30rem;
+    margin: auto auto 4rem auto;
   }
 
   section a {
@@ -178,7 +184,8 @@ footer {
 
   .item {
     flex-direction: column;
-    padding: .5rem .5rem 3rem
+    padding: .5rem .5rem 3rem;
+    width: min(25rem, 90%);
   }
 
   .item img {
@@ -186,7 +193,12 @@ footer {
     width: 17.5rem;
     height: 17.5rem;
   }
+}
 
+@media (max-width: 35rem) {
+    section {
+      width: inherit;
+    }
 }
 
 body.dark-mode {
