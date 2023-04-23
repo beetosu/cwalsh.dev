@@ -15,7 +15,7 @@
     // Dark/light mode functionality
     function enableDarkMode() {
       document.body.classList.toggle("dark-mode");
-      localStorage.darkMode = 'true';
+      sessionStorage.darkMode = 'true';
       document.getElementById("dark").src = "./files/light.svg"
 
       document.getElementById("bs").innerHTML = "💻 B.S. in Computer Science";
@@ -23,7 +23,7 @@
     }
     function disableDarkMode() {
       document.body.classList.remove("dark-mode");
-      localStorage.darkMode = 'false';
+      sessionStorage.darkMode = 'false';
       document.getElementById("dark").src = "./files/dark.svg"
 
       document.getElementById("bs").innerHTML = "💾 B.S. in Computer Science";
@@ -51,7 +51,7 @@ https://github.com/beetosu/cwalsh.dev
       '🐛', '📚', '🧋', '🏞️', '🌇',
       '🛸', '🎉', '🖼️', '🧮', '🧍'
     ]
-    if (localStorage.darkMode === 'true' || (localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (sessionStorage.darkMode === 'true' || (sessionStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       enableDarkMode();
     }
     const idxEmoji = Math.floor(Math.random() * emojis.length); 
@@ -60,10 +60,6 @@ https://github.com/beetosu/cwalsh.dev
     const hearts = ['🧡', '💙', '💚', '💜', '💛', '❤️'];
     const idxHearts = Math.floor(Math.random() * hearts.length);
     document.getElementsByTagName("footer")[0].innerHTML = `made w/ ${hearts[idxHearts]} by Colin Walsh | <a href="https://github.com/beetosu/cwalsh.dev/">Source</a> | <a href="https://github.com/beetosu/cwalsh.dev/blob/master/LICENSE.md">License</a>`
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register("/serviceworker.js");
-   }
   </script>
   <title>Colin Walsh</title>
 </head>
