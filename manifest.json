@@ -24,6 +24,6 @@
     "background_color": "#FDFDFD",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3B7AAA",
+    "theme_color": "#B55C80",
     "description": "The personal website of Colin Walsh, a software engineer based out of the Washington DC metro area"
   }

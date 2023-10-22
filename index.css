@@ -3,7 +3,7 @@ body {
 	animation: flow 30s ease infinite;
 	background: linear-gradient(225deg, #6883ba, #3d3b8e, #b55c80);
 	background-size: 600% 600%;
-	color: #DFDFDF;
+	color: #dfdfdf;
 	display: flex;
 	display: flex;
 	flex-direction: column;
@@ -15,11 +15,6 @@ body {
 	-moz-animation: flow 30s ease infinite;
 }
 
-main {
-	background-color: rgb(40, 40, 40, 0.4);
-	border-radius: 4px;
-}
-
 #container {
 	display: flex;
 	flex: 1;
@@ -27,6 +22,20 @@ main {
 	justify-content: center;
 }
 
+main {
+	align-items: center;
+	background-color: rgb(40, 40, 40, 0.4);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	width: min(500px, 80vw);
+	padding: 16px;
+}
+
+footer {
+	margin-bottom: 8px;
+	text-align: center;
+}
 
 @-webkit-keyframes flow {
 	0%{background-position:0% 50%}
