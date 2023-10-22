@@ -1,239 +1,45 @@
 body {
-  margin: auto;
-  margin-top: 3rem;
-  max-width: 60rem;
-  font-family: Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fdfdfd;
-  color: #333333;
-  display: flex;
-  flex-direction: column;
-  flex-flow: column nowrap;
+	align-items: center;
+	animation: flow 30s ease infinite;
+	background: linear-gradient(225deg, #6883ba, #3d3b8e, #b55c80);
+	background-size: 600% 600%;
+	color: #DFDFDF;
+	display: flex;
+	display: flex;
+	flex-direction: column;
+	font-family: Inconsolata, monospace;
+	justify-content: center;
+	margin: 0;
+	min-height: 100vh;
+	-webkit-animation: flow 30s ease infinite;
+	-moz-animation: flow 30s ease infinite;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4rem;
+main {
+	background-color: rgb(40, 40, 40, 0.4);
+	border-radius: 4px;
 }
 
-input {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
+#container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 4rem;
-  background-color: #eee;
-  border-radius: 10px;
+
+@-webkit-keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
 }
-
-section#about {
-  width: fit-content;
-  margin: auto auto 4rem auto;
+@-moz-keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
 }
-
-section h2 {
-  font-size: 2rem;
-  align-self: center;
-}
-
-#tldr {
-  align-self: center;
-  list-style-type: none;
-  padding: 1rem;
-  background-color: #fafafa;
-  margin-top: 0;
-  border-radius: 10px;
-}
-
-#tldr li {
-  margin: .25rem;
-}
-
-#tldr ul {
-  list-style-type: none;
-}
-
-section svg {
-  height: 12rem;
-  width: 12rem;
-  justify-self: center;
-  padding: 1rem;
-  fill: #333;
-}
-
-header h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-header p {
-  margin: 0;
-  font-size: 1.5rem;
-  margin-bottom: min(3vmin, .75em);
-}
-
-.emoji {
-  display: inline-block;
-  width: auto;
-  align-self: center;
-  height: min(15vmin, 1.15em);
-  vertical-align: -0.25em;
-}
-
-#socials {
-  display: flex;
-  align-items: center;
-}
-
-#socials svg {
-  height: 3rem;
-  width: 3rem;
-  justify-content: center;
-  padding: 1rem;
-  fill: #333;
-}
-
-.items {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.item {
-  display: flex;
-  margin: 1.5rem;
-  background-color: #fafafa;
-  border-radius: 10px;
-  width: inherit;
-}
-
-.item img {
-  height: 12rem;
-  width: 12rem;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 1.5rem;
-}
-
-.item div {
-  align-self: center;
-  margin: 0 1rem;
-}
-
-.item div.links {
-  margin: 0;
-  font-size: 1rem;
-}
-
-h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-h4 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.item p {
-  font-size: 1rem;
-}
-
-footer {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 65rem) {
-  header {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 50rem) {
-  section {
-    align-items: center;
-    width: 30rem;
-    margin: auto auto 4rem auto;
-  }
-
-  section a {
-    align-self: center;
-  }
-
-  section svg {
-    width: 17.5rem;
-    height: 17.5rem;
-    padding: 0;
-  }
-
-  .item {
-    flex-direction: column;
-    padding: .5rem .5rem 3rem;
-    width: min(25rem, 90%);
-  }
-
-  .item img {
-    align-self: center;
-    width: 17.5rem;
-    height: 17.5rem;
-  }
-}
-
-@media (max-width: 35rem) {
-    section {
-      width: inherit;
-    }
-}
-
-body.dark-mode {
-  background-color: #333;
-  color: #fdfdfd;
-}
-
-body.dark-mode #socials svg {
-  fill: #fdfdfd;
-}
-
-body.dark-mode .alarm-outline {
-  fill: #fff;
-}
-
-body.dark-mode section {
-  background-color: #3b3b3b;
-}
-
-body.dark-mode .item, body.dark-mode #tldr {
-  background-color: #383838;
-}
-
-body.dark-mode .item div.links a,
-body.dark-mode #about #tldr a,
-body.dark-mode footer a {
-  color: #b0c3ff;
-}
-
-body.dark-mode .item div.links a:visited, 
-body.dark-mode #about #tldr a:visited,
-body.dark-mode footer a:visited {
-  color: #9779b3;
-}
-
-body.dark-mode input {
-  content: url("./files/light.svg")
+@keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
 }
