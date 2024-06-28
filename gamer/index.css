@@ -20,6 +20,10 @@ header {
     align-items: center;
 }
 
+section {
+    margin: 40px;
+}
+
 .warning {
     background-color: #fff34fa6;
     border-radius: 8px;
