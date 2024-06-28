@@ -1,0 +1,27 @@
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding: 8px;
+    animation: flow 30s ease infinite;
+	background: linear-gradient(225deg, #5612D6, #D9CF79);
+	background-size: 600% 600%;
+}
+
+header {
+    display: flex;
+    gap: 8px;
+    background-color: #bbbbbb66;
+    border-radius: 8px;
+    padding: 8px;
+    width: min(100%, 700px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header img {
+    width: 100px;
+    height: 100px;
+}
