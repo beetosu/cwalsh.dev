@@ -20,6 +20,13 @@ header {
     align-items: center;
 }
 
+.warning {
+    background-color: #fffbbdbb;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 0;
+    text-align: center;
+}
 
 header img {
     width: 100px;
