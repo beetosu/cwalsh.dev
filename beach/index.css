@@ -1,0 +1,37 @@
+
+body {
+    min-height: 100vh;
+    font-family: Verdana, sans-serif;
+    background: #2A7B9B;
+    background: linear-gradient(rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 89%, rgba(237, 221, 83, 1) 100%);
+}
+
+.ideas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header {
+    text-align: center;
+    background-color: #11111122;
+    border-radius: 3px;
+    padding: 4px;
+
+    p {
+        font-size: x-large;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;;
+}
+
+section {
+    background-color: #11111122;
+    border-radius: 3px;
+    padding: 16px;
+}
