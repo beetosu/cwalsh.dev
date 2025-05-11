@@ -17,6 +17,8 @@ header {
     background-color: #11111122;
     border-radius: 3px;
     padding: 4px;
+    width: min(80vw, 500px);
+    margin: 0 auto;
 
     p {
         font-size: x-large;
@@ -27,11 +29,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 16px;;
+    margin-top: 16px;
+    align-items: center;
 }
 
 section {
     background-color: #11111122;
     border-radius: 3px;
     padding: 16px;
+    width: min(80vw, 500px);
 }
