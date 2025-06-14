@@ -1,0 +1,13 @@
+#container #content header {
+    margin-bottom: 0px;
+}
+
+main {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 0 16px;
+}

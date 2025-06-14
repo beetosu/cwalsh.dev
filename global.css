@@ -1,0 +1,75 @@
+body {
+	align-items: center;
+	animation: flow 30s ease infinite;
+	background: linear-gradient(225deg, #6883ba, #3d3b8e, #b55c80);
+	background-size: 600% 600%;
+	color: #dfdfdf;
+	display: flex;
+	flex-direction: column;
+	font-family: Inconsolata, monospace;
+	height: 100vh;
+	height: 100svh;
+	justify-content: center;
+	margin: 0;
+	-webkit-animation: flow 30s ease infinite;
+	-moz-animation: flow 30s ease infinite;
+}
+
+#container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+
+	#content {
+		align-items: center;
+		background-color: rgb(40, 40, 40, 0.4);
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		max-height: 80vh;
+		overflow-y: auto;
+		width: min(500px, 80vw);
+		padding: 16px;
+
+		header {
+			margin-bottom: 16px;
+
+			h1 {
+				margin-bottom: 0;
+			}
+			p {
+				font-style: italic;
+				margin-top: 0;
+			}
+            a {
+                text-decoration: none;
+            }
+		}
+    }
+}
+
+a {
+	color: #dfdfdf;
+}
+
+footer {
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+@-webkit-keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@-moz-keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+@keyframes flow {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
