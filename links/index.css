@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(225deg, #689E41, #1D9951, #0F661E);
+}
+
+#container #content {
+    background: none;
+    display: flex;
+
+    header {
+        background-color: rgb(40, 40, 40, 0.4);
+		border-radius: 8px;
+        padding: 16px 0;
+        text-align: center;
+        width: inherit;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        gap: 16px;
+
+        h2,
+        .back-home {
+            text-align: center;
+            width: inherit;
+            background-color: rgb(40, 40, 40, 0.4);
+		    border-radius: 8px;
+            padding: 16px 0;
+        }
+
+        .link {
+            align-items: center;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto;
+            gap: 0 32px;
+            background-color: rgb(40, 40, 40, 0.4);
+		    border-radius: 8px;
+            width: inherit;
+            padding: 16px 0;
+            text-decoration: none;
+
+            .link-icon {
+                grid-row: 1 / span 2;
+                margin-left: 16px;
+                width: 72px;
+                line-height: 100%;
+                font-style: normal;
+                font-size: 56px;
+                text-decoration: none;
+            }
+
+            h3,
+            p {
+                margin: 0;
+                text-decoration: underline
+            }
+
+            p {
+                font-style: italic;
+            }
+        }
+    }
+}
