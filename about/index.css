@@ -1,3 +1,8 @@
+body {
+    background: linear-gradient(120deg, #978d30 25%, #161511 50%, #6c1d79);
+    background-size: 600% 600%;
+}
+
 #container #content header {
     margin-bottom: 0px;
 }
